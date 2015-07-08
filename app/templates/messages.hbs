@@ -7,12 +7,16 @@
   </div>
   <div class="row">
     <div class="col-sm-3 col-md-2">
-      <a href class="btn btn-danger btn-block">Compose</a>
+      {{#link-to 'messages.compose' class="btn btn-danger btn-block"}}
+        Compose
+      {{/link-to}}
       <hr>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active">
-          <a href=""><span class="badge pull-right">32</span> Inbox</a>
-        </li>
+        {{#link-to 'messages.list' tagName="li"}}
+          {{#link-to 'messages.list'}}
+            <span class="badge pull-right">32</span> Inbox
+          {{/link-to}}
+        {{/link-to}}
         <li><a href="">Sent</a></li>
         <li><a href="">Archive</a></li>
         <li><a href="">Trash</a></li>

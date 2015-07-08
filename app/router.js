@@ -10,7 +10,8 @@ Router.map(function() {
   this.route('connections', { path: '/connections' });
   this.route('companies');
   this.route('messages', function() {
-
+    this.route('list', { path: '/' });
+    this.route('compose');
   });
 });
 
