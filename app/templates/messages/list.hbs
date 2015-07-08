@@ -2,27 +2,29 @@
   <div class="action-dropdown"><span style="margin-top:5px;">All Messages</span></div>
 </div>
 <div class="inbox-list">
-  <div class="inbox-item">
-    <div class="item-content">
-      <img class="photo" src="" alt="" width="60">
-      <div class="date">
-        <span class="past">Sent at</span>
-      </div>
-      <div class="msg-content">
-        <p class="participants">
-          <span class="new-miniprofile-container">
-            <strong>
-            John Smith
-            </strong>
-          </span>
-        </p>
-        <p class="headline">Message subject</p>
-        <div class="note">
-          <p>
-            Message preview
+  {{#each model.messages as |message|}}
+    <div class="inbox-item">
+      <div class="item-content">
+        <img class="photo" src={{message.pictureUrl}} alt={{message.name}} width="60">
+        <div class="date">
+          <span class="past">{{message.timestamp}}</span>
+        </div>
+        <div class="msg-content">
+          <p class="participants">
+            <span class="new-miniprofile-container">
+              <strong>
+                {{message.name}}
+              </strong>
+            </span>
           </p>
+          <p class="headline">{{message.subject}}</p>
+          <div class="note">
+            <p>
+              {{truncate-text message.body max=100}}
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  {{/each}}
 </div>

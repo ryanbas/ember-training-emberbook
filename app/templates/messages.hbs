@@ -12,14 +12,29 @@
       {{/link-to}}
       <hr>
       <ul class="nav nav-pills nav-stacked">
-        {{#link-to 'messages.list' tagName="li"}}
-          {{#link-to 'messages.list'}}
+        {{#link-to 'messages.list' 'inbox' tagName="li"}}
+          {{#link-to 'messages.list' 'inbox'}}
             <span class="badge pull-right">32</span> Inbox
           {{/link-to}}
         {{/link-to}}
-        <li><a href="">Sent</a></li>
-        <li><a href="">Archive</a></li>
-        <li><a href="">Trash</a></li>
+
+        {{#link-to 'messages.list' 'sent' tagName="li"}}
+          {{#link-to 'messages.list' 'sent'}}
+            Sent
+          {{/link-to}}
+        {{/link-to}}
+
+        {{#link-to 'messages.list' 'archive' tagName="li"}}
+          {{#link-to 'messages.list' 'archive'}}
+            Archive
+          {{/link-to}}
+        {{/link-to}}
+
+        {{#link-to 'messages.list' 'trash' tagName="li"}}
+          {{#link-to 'messages.list' 'trash'}}
+            Trash
+          {{/link-to}}
+        {{/link-to}}
       </ul>
     </div>
     <div class="col-md-7 content-outer">
