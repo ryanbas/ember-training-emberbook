@@ -3,26 +3,26 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Connections</h1>
+      <h1>Companies</h1>
     </div>
   </div>
   <div class="row">
     <div class="col-md-10 content-outer">
       <div class="list">
-        {{#each model.connections as |connection|}}
+        {{#each model.companies as |company|}}
           <div class="list-item">
             <div class="item-content">
-              <img class="photo" src={{connection.pictureUrl}} alt={{connection.name}} width="60">
+              <img class="photo" src={{company.pictureUrl}} alt={{company.name}} width="60">
               <div class="date">
                 <span class="past">
-                  {{connection.createdAt}}
+                  {{company.createdAt}}
                 </span>
               </div>
               <div class="msg-content">
                 <p style="margin-bottom: 0;" class="participants">
-                  <strong>{{connection.name}}</strong>
+                  <strong>{{company.name}}</strong>
                 </p>
-                <p class="headline">{{connection.title}}</p>
+                <p class="headline">{{company.followers}}</p>
               </div>
             </div>
           </div>
