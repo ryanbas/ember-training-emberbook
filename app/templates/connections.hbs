@@ -1,7 +1,5 @@
 <link rel="stylesheet" type="text/css" href="/assets/connections.css">
 
-{{log model}}
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -12,7 +10,6 @@
     <div class="col-md-10 content-outer">
       <div class="list">
         {{#each model.connections as |connection|}}
-          {{log connection}}
           <div class="list-item">
             <div class="item-content">
               <img class="photo" src={{connection.pictureUrl}} alt={{connection.name}} width="60">
