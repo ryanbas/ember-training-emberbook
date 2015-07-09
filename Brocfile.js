@@ -35,6 +35,7 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
 });
 
 app.import('bower_components/moment/moment.js');
+app.import('bower_components/markdown/lib/markdown.js');
 
 app.import('bower_components/markdown/lib/markdown.js');
 
