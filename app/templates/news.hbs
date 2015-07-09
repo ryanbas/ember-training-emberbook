@@ -13,7 +13,7 @@
       <div class="stream-nav-container" style="height: 620px;">
         <div class="stream-nav">
           {{#each model.articles as |article|}}
-            {{#link-to 'news.article' article.articleId class="navi-item"}}
+            {{#link-to 'news.article' article.permLink class="navi-item"}}
               <div class="image-container">
                 <img src={{article.imageUrl}} class="image" alt={{article.title}} width="80" height="80">
               </div>
