@@ -1,0 +1,41 @@
+{{#with model as |message|}}
+  <div class="topActionBar">
+    <div class="action-dropdown">
+      <a style="margin-right:20px;margin-left:10px;color:#333;" href>
+        Reply
+      </a>
+      <a style="margin-right:20px;color:#333;" href>
+        Trash
+      </a>
+      <a style="margin-right:20px;color:#333;" href>
+        More
+      </a>
+      <a style="color:#333;float:right;" href>Next
+  </a>
+    </div>
+  </div>
+  <div class="inbox-list">
+    <div class="inbox-item">
+      <div class="item-content">
+        <img style="margin-left: 10px;" class="photo" src="{{message.pictureUrl}}" alt="{{message.name}}" height="60" width="60">
+        <div class="date">
+          <span class="past">{{format-date message.timestamp}}</span>
+        </div>
+
+        <div class="msg-content">
+          <p class="participants">
+            <span class="new-miniprofile-container">
+              <strong>
+                <a href="#">{{message.name}}</a>
+              </strong>
+            </span>
+          </p>
+          <p class="headline">{{message.subject}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="msg-content-full">
+    <p>{{message.body}}</p>
+  </div>
+{{/with}}
