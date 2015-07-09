@@ -22,7 +22,7 @@
         <div class="pub-date">{{format-date article.publishedAt}}</div>
       </div>
       <div class="article-body">
-        {{article.articleContent}}
+        {{markdown-preview text=article.articleContent}}
       </div>
     </div>
   </div>
