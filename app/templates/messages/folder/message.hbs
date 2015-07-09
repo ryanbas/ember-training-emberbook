@@ -3,7 +3,6 @@
     <div class="action-dropdown">
       <a style="margin-right:20px;margin-left:10px;color:#333;" href>
         {{bs-icon2 name="arrow-left"}}
-        <bs-icon3 name="arrow-left" />
         Reply
       </a>
       <a style="margin-right:20px;color:#333;" href>
@@ -41,6 +40,6 @@
     </div>
   </div>
   <div class="msg-content-full">
-    <p>{{message.body}}</p>
+    {{markdown-preview text=message.body}}
   </div>
 {{/with}}
