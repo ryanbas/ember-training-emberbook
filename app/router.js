@@ -10,8 +10,11 @@ Router.map(function() {
   this.route('connections', { path: '/connections' });
   this.route('companies');
   this.route('messages', function() {
-    this.route('list', { path: ':folderId' });
     this.route('compose');
+    this.route('folder', { path: ':folderId' }, function() {
+      this.route('index', { path: '/' });
+      this.route('message', { path: ':messageId' });
+    });
   });
 });
 

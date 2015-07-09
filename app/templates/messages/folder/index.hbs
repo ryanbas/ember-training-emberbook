@@ -1,13 +1,14 @@
+
 <div class="topActionBar">
   <div class="action-dropdown"><span style="margin-top:5px;">All Messages</span></div>
 </div>
 <div class="inbox-list">
   {{#each model.messages as |message|}}
-    <div class="inbox-item">
+    {{#link-to 'messages.folder.message' message.threadId class="inbox-item"}}
       <div class="item-content">
         <img class="photo" src={{message.pictureUrl}} alt={{message.name}} width="60">
         <div class="date">
-          <span class="past">{{message.timestamp}}</span>
+          <span class="past">{{format-date message.timestamp}}</span>
         </div>
         <div class="msg-content">
           <p class="participants">
@@ -25,6 +26,6 @@
           </div>
         </div>
       </div>
-    </div>
+    {{/link-to}}
   {{/each}}
 </div>
