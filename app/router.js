@@ -17,7 +17,7 @@ Router.map(function() {
     });
   });
   this.route('news', function() {
-    this.route('article', { path: ':articleId' });
+    this.route('article', { path: ':permLink' });
   });
 });
 
