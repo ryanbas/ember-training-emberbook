@@ -16,6 +16,9 @@ Router.map(function() {
       this.route('message', { path: ':messageId' });
     });
   });
+  this.route('news', function() {
+    this.route('article', { path: ':articleId' });
+  });
 });
 
 export default Router;

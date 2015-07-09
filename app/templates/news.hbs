@@ -1,0 +1,36 @@
+<link rel="stylesheet" type="text/css" href="/assets/articles.css">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>News</h1>
+    </div>
+    <div class="col-xs-12">
+    </div>
+  </div>
+
+  <div class="row" style="background: white">
+    <div class="col-md-4 stream">
+      <div class="stream-nav-container" style="height: 620px;">
+        <div class="stream-nav">
+          {{#each model.articles as |article|}}
+            {{#link-to 'news.article' article.articleId class="navi-item"}}
+              <div class="image-container">
+                <img src={{article.imageUrl}} class="image" alt={{article.title}} width="80" height="80">
+              </div>
+              <div>
+                <span class="title">{{article.title}}</span>
+                <span class="label">{{article.author.firstName}} {{article.author.lastName}}</span>
+              </div>
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-8">
+      {{outlet}}
+    </div>
+  </div>
+</div>
