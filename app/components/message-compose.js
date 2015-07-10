@@ -14,6 +14,11 @@ export default Ember.Component.extend({
         this.get('flash').show("Your message was sent successfully!");
         this.get('routing').transitionTo('messages');
       });
+    },
+
+    addAnother() {
+      this.get('message.recipients').
+        pushObject(`new person ${Date.now()}`);
     }
   }
 });
