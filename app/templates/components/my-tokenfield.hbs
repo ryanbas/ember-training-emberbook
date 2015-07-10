@@ -1,0 +1,12 @@
+<div class="tokenfield form-control" style="width: 100%;">
+  {{#each tokens as |token|}}
+    <div class="token">
+      <span class="token-label" style="max-width: 607px;">
+        {{yield token}}
+      </span>
+      <a href {{action "remove" token}} class="close" tabindex="-1">×</a>
+    </div>
+  {{/each}}
+
+  {{input type="text" value=newToken enter="add" class="token-input" autocomplete="off" placeholder="" tabindex="0" style="min-width: 100px;"}}
+</div>

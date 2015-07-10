@@ -1,6 +1,13 @@
 <div class="form-group">
   <label for="recipient">To</label>
-  {{bootstrap-tokenfield tokens=message.recipients}}
+  <my-tokenfield
+    tokens={{message.recipients}}
+    tokensChanged={{action (mut message.recipients)}}
+    as |recipient|>
+    <img src="http://lorempixel.com/20/20/">
+    {{recipient}}
+  </my-tokenfield>
+
   <ul>
     {{#each message.recipients as |r|}}
       <li>{{r}}</li>
