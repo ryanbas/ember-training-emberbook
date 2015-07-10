@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     send() {
-      this.set('body', 'you sent me!')
+      this.set('body', 'you sent me!');
     }
   }
 });

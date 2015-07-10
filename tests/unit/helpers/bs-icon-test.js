@@ -5,6 +5,6 @@ module('Unit | Helper | bs icon');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  var result = bsIcon(42);
+  var result = bsIcon([]);
   assert.ok(result);
 });
