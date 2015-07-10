@@ -34,12 +34,10 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
     destDir: 'fonts'
 });
 
+//app.import('bower_components/markdown/lib/markdown.js');
 app.import('bower_components/moment/moment.js');
-app.import('bower_components/markdown/lib/markdown.js');
 app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
 app.import('bower_components/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css');
-
-app.import('bower_components/markdown/lib/markdown.js');
 
 app.import('bower_components/bootstrap-tokenfield/dist/bootstrap-tokenfield.js');
 app.import('bower_components/bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css');
