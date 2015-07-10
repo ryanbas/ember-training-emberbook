@@ -15,5 +15,9 @@
     "bootstrap": "~3.3.5",
     "moment": "~2.10.3",
     "markdown": "~0.5.0"
+  },
+  "resolutions": {
+    "jquery": "^1.11.1",
+    "bootstrap": "~3.3.5"
   }
 }
