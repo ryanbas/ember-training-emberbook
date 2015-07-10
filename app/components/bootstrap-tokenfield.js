@@ -12,13 +12,11 @@ export default Ember.Component.extend({
     });
   },
 
-  tokensDidChange: Ember.observer('tokens.@each', function() {
-    if (this._state === 'inDOM') {
-      this._settingTokens = true;
-      this.$('input').tokenfield('setTokens', this.get('tokens'));
-      this._settingTokens = false;
-    }
-  }),
+  didRender() {
+    this._settingTokens = true;
+    this.$('input').tokenfield('setTokens', this.get('tokens'));
+    this._settingTokens = false;
+  },
 
   willDestroyElement() {
     this.$('input').tokenfield('destroy');

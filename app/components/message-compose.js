@@ -17,7 +17,9 @@ export default Ember.Component.extend({
     },
 
     addAnother() {
-      this.get('message.recipients').pushObject(`new person ${Date.now()}`);
+      let recipients = this.get('message.recipients').slice();
+      recipients.pushObject(`new person ${Date.now()}`);
+      this.set('message.recipients', recipients);
     }
   }
 });
